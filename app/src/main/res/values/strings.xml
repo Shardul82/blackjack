@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BlackJack</string>
+    <string name="total_money">total money:</string>
+    <string name="game_over">Game over</string>
+    <string name="play_again">play Again</string>
+    <string name="load_saved_state">load saved Game</string>
+    <string name="setting">setting</string>
+
+    <string-array name="deck_array">
+        <item>1 deck</item>
+        <item>2 deck</item>
+    </string-array>
+
+    <string-array name="rule_spinner">
+        <item>Standard Rule</item>
+        <item>Blind game</item>
+    </string-array>
+</resources>

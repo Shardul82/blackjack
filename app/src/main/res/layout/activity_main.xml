@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image_table"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/total_money"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="24dp"
+        android:text="--"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/bet_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="2dp"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/acceptBidButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bet_amount_under_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bet amount"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/bet_amount"
+        app:layout_constraintStart_toStartOf="@+id/bet_amount"
+        app:layout_constraintTop_toBottomOf="@+id/bet_amount" />
+
+    <ImageButton
+        android:id="@+id/acceptBidButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="@color/green"
+        android:paddingLeft="25dp"
+        android:paddingTop="15dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/deal_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancelBidButton" />
+
+    <ImageButton
+        android:id="@+id/cancelBidButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:background="@color/red"
+        android:paddingLeft="25dp"
+        android:paddingTop="15dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/clear_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/acceptBidButton"
+        app:layout_constraintEnd_toStartOf="@+id/acceptBidButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/acceptBidButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Place Your Bet"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/button_25_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_1_chip"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button"
+        android:text="1"
+        android:textSize="12sp"
+
+        app:layout_constraintEnd_toStartOf="@+id/button_10_chip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_10_chip" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_100_chip"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/background_button_100"
+        android:text="100"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_50_chip" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_50_chip"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_button_50"
+        android:text="50"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_100_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_25_chip"
+        app:layout_constraintTop_toTopOf="@+id/button_100_chip" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_10_chip"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button_10"
+        android:text="10"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_25_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_1_chip"
+        app:layout_constraintTop_toTopOf="@+id/button_25_chip" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_25_chip"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_button_25"
+        android:text="25"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_50_chip"
+        app:layout_constraintStart_toEndOf="@+id/button_10_chip"
+        app:layout_constraintTop_toTopOf="@+id/button_50_chip" />
+
+    <TextView
+        android:id="@+id/accept_bid_under_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="deal"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/acceptBidButton"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/acceptBidButton"
+        app:layout_constraintTop_toBottomOf="@+id/acceptBidButton" />
+
+    <TextView
+        android:id="@+id/cancel_button_under_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="clear"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/cancelBidButton"
+        app:layout_constraintStart_toStartOf="@+id/cancelBidButton"
+        app:layout_constraintTop_toBottomOf="@+id/cancelBidButton" />
+
+    <Button
+        android:id="@+id/load_saved_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"
+        android:text="@string/load_saved_state"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/setting_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/setting"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
